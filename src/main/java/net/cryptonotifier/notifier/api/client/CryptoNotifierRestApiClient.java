@@ -1,16 +1,16 @@
 package net.cryptonotifier.notifier.api.client;
 
+import java.util.List;
+import net.cryptonotifier.notifier.api.client.domain.BasicResponse;
 import net.cryptonotifier.notifier.api.client.domain.NewSubscription;
 import net.cryptonotifier.notifier.api.client.domain.SubscriptionResponse;
-import java.util.List;
 
-public interface NotifierRestApiClient {
+public interface CryptoNotifierRestApiClient {
 
   /**
    * Create Subscription
    *
    * @param newSubscription : New subscription of address to create.
-   *
    * @return new subscription details
    */
   SubscriptionResponse createSubscription(NewSubscription newSubscription);
@@ -19,7 +19,6 @@ public interface NotifierRestApiClient {
    * Get Subscription
    *
    * @param subscriptionId : Subscription Id.
-   *
    * @return subscription details
    */
   SubscriptionResponse getSubscription(String subscriptionId);
@@ -28,8 +27,7 @@ public interface NotifierRestApiClient {
    * Get Subscription List
    *
    * @param start : Starting index.
-   * @param size : The total items in the response
-   *
+   * @param size  : The total items in the response
    * @return subscriptions details
    */
   List<SubscriptionResponse> getSubscriptions(int start, int size);
@@ -37,10 +35,9 @@ public interface NotifierRestApiClient {
   /**
    * Update Subscription
    *
-   * @param newSubscription : New subscription of address to create.
-   *
+   * @param subscriptionId : Subscription Id.
    */
 
-  void deleteSubscription(NewSubscription newSubscription);
+  BasicResponse deleteSubscription(String subscriptionId);
 
 }

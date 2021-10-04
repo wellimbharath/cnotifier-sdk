@@ -1,10 +1,11 @@
 package net.cryptonotifier.notifier.api.client.config;
 
-public class NotifierApiConfig {
+public class CryptoNotifierApiConfig {
   /**
    * Base domain for URLs.
    */
   private static String BASE_DOMAIN = "cryptonotifier.net";
+
 
 
   /**

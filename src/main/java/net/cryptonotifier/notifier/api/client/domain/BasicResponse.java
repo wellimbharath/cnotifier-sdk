@@ -7,11 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
-public class NewSubscription {
-  String address;
-  String token;
-  String network;
-  String webhookUrl;
-  int confirmations;
+public class BasicResponse {
+  int code ;
+  String msg;
 }

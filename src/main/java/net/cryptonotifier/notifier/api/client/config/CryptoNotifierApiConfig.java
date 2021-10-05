@@ -6,8 +6,6 @@ public class CryptoNotifierApiConfig {
    */
   private static String BASE_DOMAIN = "cryptonotifier.net";
 
-
-
   /**
    * Set the URL base domain name (e.g., binance.com).
    *

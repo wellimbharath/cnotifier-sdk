@@ -7,7 +7,7 @@ Features
 ---
 ---
 
-- Support for synchronous REST requests to all Account endpoints.
+- Support for synchronous REST requests to all subscription endpoints.
 
 Installation
 ---

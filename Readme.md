@@ -1,4 +1,5 @@
-Cryptonotifier Java SDK
+Cryptonotifier
+---
 
 **_cryptonotifier-sdk_** is a lightweight Java library for interacting with the [Cryptonotifier API](https://www.cryptonotifier.net), providing complete API coverage, and supporting REST api requests.
 

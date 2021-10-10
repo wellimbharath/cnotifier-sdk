@@ -19,7 +19,7 @@ Installation
 
 ```
 # build.gradle
-implementation group: 'com.liferay', name: 'com.liferay.adaptive.media.test.util', version: '4.0.3'
+implementation group: 'net.cryptonotifier', name: 'net.cryptonotifier.notifier', version: '0.0.1'
 ```
 
 Example: 

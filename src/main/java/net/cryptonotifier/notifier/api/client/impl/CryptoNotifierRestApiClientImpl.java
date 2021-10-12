@@ -4,6 +4,7 @@ import static net.cryptonotifier.notifier.api.client.impl.CryptoNotifierServiceG
 import static net.cryptonotifier.notifier.api.client.impl.CryptoNotifierServiceGenerator.executeSync;
 
 import java.util.List;
+import net.cryptonotifier.notifier.api.client.CryptoNotifierError;
 import net.cryptonotifier.notifier.api.client.CryptoNotifierRestApiClient;
 import net.cryptonotifier.notifier.api.client.domain.BasicResponse;
 import net.cryptonotifier.notifier.api.client.domain.NewSubscription;
@@ -22,8 +23,10 @@ public class CryptoNotifierRestApiClientImpl implements CryptoNotifierRestApiCli
 
 
   @Override
-  public SubscriptionResponse createSubscription(NewSubscription newSubscription) {
+  public SubscriptionResponse createSubscription(NewSubscription newSubscription) throws
+      CryptoNotifierError {
     final Call<SubscriptionResponse> call;
+
     call = cryptoNotifierService.createSubscription(newSubscription);
     return executeSync(call);
   }

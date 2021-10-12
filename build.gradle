@@ -26,8 +26,8 @@ dependencies {
 
     implementation group: 'com.squareup.retrofit2', name: 'converter-jackson', version: '2.9.0'
 
-    testImplementation 'junit:junit:4.12'
-
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
     // https://mvnrepository.com/artifact/org.projectlombok/lombok
     compileOnly 'org.projectlombok:lombok:1.18.20'
     annotationProcessor 'org.projectlombok:lombok:1.18.20'

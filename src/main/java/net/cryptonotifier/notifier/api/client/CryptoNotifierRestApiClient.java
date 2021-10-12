@@ -13,7 +13,8 @@ public interface CryptoNotifierRestApiClient {
    * @param newSubscription : New subscription of address to create.
    * @return new subscription details
    */
-  SubscriptionResponse createSubscription(NewSubscription newSubscription);
+  SubscriptionResponse createSubscription(NewSubscription newSubscription)
+      throws CryptoNotifierError;
 
   /**
    * Get Subscription

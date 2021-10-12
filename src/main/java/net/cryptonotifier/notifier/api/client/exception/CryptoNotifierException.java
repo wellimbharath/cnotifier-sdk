@@ -67,7 +67,7 @@ public class CryptoNotifierException extends RuntimeException {
   @Override
   public String getMessage() {
     if (error != null) {
-      return error.getMsg();
+      return error.getMessage();
     }
     return super.getMessage();
   }

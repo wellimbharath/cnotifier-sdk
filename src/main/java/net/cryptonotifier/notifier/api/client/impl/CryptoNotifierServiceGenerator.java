@@ -60,11 +60,10 @@ public class CryptoNotifierServiceGenerator {
       retrofitBuilder.client(sharedClient);
     } else {
       // `adaptedClient` will use its own interceptor, but share thread pool etc with the 'parent' client
-      AuthenticationInterceptor interceptor = new AuthenticationInterceptor(apiKey);
+      AuthenticationInterceptor interceptor = new AuthenticationInterceptor(apiKey);;
       OkHttpClient adaptedClient = sharedClient.newBuilder().addInterceptor(interceptor).build();
       retrofitBuilder.client(adaptedClient);
     }
-
     Retrofit retrofit = retrofitBuilder.build();
     return retrofit.create(serviceClass);
   }
@@ -82,6 +81,7 @@ public class CryptoNotifierServiceGenerator {
         throw new CryptoNotifierException(apiError);
       }
     } catch (IOException e) {
+      e.printStackTrace();
       throw new CryptoNotifierException(e);
     }
   }

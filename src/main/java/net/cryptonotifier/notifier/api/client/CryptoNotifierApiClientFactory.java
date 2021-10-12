@@ -19,7 +19,7 @@ public class CryptoNotifierApiClientFactory {
    */
 
   public CryptoNotifierRestApiClient newRestClient() {
-    return new CryptoNotifierRestApiClientImpl(apiKey);
+    return new CryptoNotifierRestApiClientImpl(this.apiKey);
   }
 
 }

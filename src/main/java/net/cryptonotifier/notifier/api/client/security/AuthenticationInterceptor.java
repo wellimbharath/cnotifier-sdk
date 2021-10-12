@@ -24,11 +24,9 @@ public class AuthenticationInterceptor implements Interceptor {
   public Response intercept(Chain chain) throws IOException {
     Request original = chain.request();
     Request.Builder newRequestBuilder = original.newBuilder();
-
-    newRequestBuilder.addHeader(CryptoNotifierApiConstant.API_KEY_HEADER, apiKey);
-
-    // Build new request after adding the necessary authentication information
+    newRequestBuilder.addHeader(CryptoNotifierApiConstant.API_KEY_HEADER, this.apiKey);
     Request newRequest = newRequestBuilder.build();
+    System.out.println(newRequest.headers());
     return chain.proceed(newRequest);
   }
 

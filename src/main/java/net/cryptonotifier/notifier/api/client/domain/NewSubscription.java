@@ -13,5 +13,5 @@ public class NewSubscription {
   String token;
   String network;
   String webhookUrl;
-  int confirmations;
+  int confirmation;
 }

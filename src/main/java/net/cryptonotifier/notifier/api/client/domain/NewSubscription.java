@@ -10,7 +10,7 @@ import java.util.List;
 @NoArgsConstructor
 
 public class NewSubscription {
-  List<String> address;
+  List<String> addresses;
   String token;
   String network;
   String webhookUrl;

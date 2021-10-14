@@ -66,7 +66,15 @@ sourceSets {
 }
 
 publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'net.cryptonotifier.api'
+            artifactId = 'cnotifier-sdk'
+            version = '0.0.11'
 
+            from components.java
+        }
+    }
     repositories {
         maven {
             name = "GitHubPackages"
@@ -77,4 +85,4 @@ publishing {
             }
         }
     }
-}
+} 

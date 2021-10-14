@@ -1,9 +1,11 @@
 package net.cryptonotifier.notifier.api.client;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import net.cryptonotifier.notifier.api.client.constant.CryptoNotifierApiConstant;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
 public class CryptoNotifierError extends Throwable {
 

@@ -9,7 +9,8 @@ import java.util.LinkedHashMap;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SubscriptionResponse {
-  LinkedHashMap<String,String> data;
+
+  Object data;
   int code;
   String msg;
 }

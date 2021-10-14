@@ -1,5 +1,6 @@
 package net.cryptonotifier.notifier.api.client;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import java.util.List;
 import net.cryptonotifier.notifier.api.client.domain.BasicResponse;
 import net.cryptonotifier.notifier.api.client.domain.NewSubscription;
@@ -14,7 +15,7 @@ public interface CryptoNotifierRestApiClient {
    * @return new subscription details
    */
   SubscriptionResponse createSubscription(NewSubscription newSubscription)
-      throws CryptoNotifierError;
+      throws CryptoNotifierError, JsonProcessingException;
 
   /**
    * Get Subscription

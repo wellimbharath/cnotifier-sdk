@@ -3,6 +3,9 @@ package net.cryptonotifier.notifier.api.client.impl;
 import static net.cryptonotifier.notifier.api.client.impl.CryptoNotifierServiceGenerator.createService;
 import static net.cryptonotifier.notifier.api.client.impl.CryptoNotifierServiceGenerator.executeSync;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.List;
 import net.cryptonotifier.notifier.api.client.CryptoNotifierError;
 import net.cryptonotifier.notifier.api.client.CryptoNotifierRestApiClient;
@@ -24,10 +27,11 @@ public class CryptoNotifierRestApiClientImpl implements CryptoNotifierRestApiCli
 
   @Override
   public SubscriptionResponse createSubscription(NewSubscription newSubscription) throws
-      CryptoNotifierError {
+      CryptoNotifierError, JsonProcessingException {
     final Call<SubscriptionResponse> call;
-
-    call = cryptoNotifierService.createSubscription(newSubscription);
+    ObjectMapper objectMapper = new ObjectMapper();
+    call = cryptoNotifierService.createSubscription(objectMapper.convertValue(newSubscription,
+        JsonNode.class));
     return executeSync(call);
   }
 

@@ -61,21 +61,48 @@ sourceSets {
         }
     }
 }
-
-publishing {
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/Bharathsh36/cnotifier-sdk")
-            credentials {
-                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
-            }
-        }
-    }
-    publications {
-        gpr(MavenPublication) {
-            from(components.java)
-        }
-    }
-}
+//
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+//
+//            repository(url: "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/") {
+//                authentication(userName: ossrhUsername, password: ossrhPassword)
+//            }
+//
+//            snapshotRepository(url: "https://s01.oss.sonatype.org/content/repositories/snapshots/") {
+//                authentication(userName: ossrhUsername, password: ossrhPassword)
+//            }
+//
+//            pom.project {
+//                name 'Cryptonotifier Java Client'
+//                packaging 'jar'
+//                // optionally artifactId can be defined here
+//                description 'Cryptonotifier Java Client for using apis of https://www.cryptonotifier.net'
+//                url 'https://www.cryptonotifier.net'
+//
+//                scm {
+//                    connection 'scm:svn:http://foo.googlecode.com/svn/trunk/'
+//                    developerConnection 'scm:svn:https://foo.googlecode.com/svn/trunk/'
+//                    url 'http://foo.googlecode.com/svn/trunk/'
+//                }
+//
+//                licenses {
+//                    license {
+//                        name 'The Apache License, Version 2.0'
+//                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//                    }
+//                }
+//
+//                developers {
+//                    developer {
+//                        id 'bharathsh36'
+//                        name 'Bharath M'
+//                        email 'bharathsh36@gmail.com'
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}

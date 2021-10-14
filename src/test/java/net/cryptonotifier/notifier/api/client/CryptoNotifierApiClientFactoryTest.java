@@ -10,8 +10,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 public class CryptoNotifierApiClientFactoryTest extends TestCase {
 
-//  @Test
-//  public void testSubscription() {
+  @Test
+  public void testSubscription() {
 //    String apikey = "";
 //
 //    CryptoNotifierApiClientFactory cryptoNotifierRestApiFactory = CryptoNotifierApiClientFactory.newInstance(apikey);
@@ -26,5 +26,5 @@ public class CryptoNotifierApiClientFactoryTest extends TestCase {
 //    } catch (CryptoNotifierError | JsonProcessingException e) {
 //      Assertions.assertEquals(e.getMessage(),"Invalid api key.");
 //    }
-//  }
+  }
 }

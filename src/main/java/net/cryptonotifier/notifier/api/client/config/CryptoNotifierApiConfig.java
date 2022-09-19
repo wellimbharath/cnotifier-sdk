@@ -4,7 +4,7 @@ public class CryptoNotifierApiConfig {
   /**
    * Base domain for URLs.
    */
-  private static String BASE_DOMAIN = "cryptonotifier.net";
+  private static String BASE_DOMAIN = "blockend.com";
 
   /**
    * Set the URL base domain name (e.g., binance.com).
@@ -28,7 +28,7 @@ public class CryptoNotifierApiConfig {
    * REST API base URL.
    */
   public static String getApiBaseUrl() {
-    return String.format("https://api.%s", getBaseDomain());
+    return String.format("http://api.%s", getBaseDomain());
   }
 
 }

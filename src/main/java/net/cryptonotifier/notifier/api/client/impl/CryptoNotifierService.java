@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import java.util.List;
 import net.cryptonotifier.notifier.api.client.CryptoNotifierError;
 import net.cryptonotifier.notifier.api.client.domain.BasicResponse;
+import net.cryptonotifier.notifier.api.client.domain.ConfirmationResponse;
 import net.cryptonotifier.notifier.api.client.domain.NewSubscription;
 import net.cryptonotifier.notifier.api.client.domain.SubscriptionResponse;
 import retrofit2.Call;
@@ -32,4 +33,6 @@ public interface CryptoNotifierService {
   @DELETE("/api/v1/subscriptions/{subscriptionId}")
   Call<BasicResponse> deleteSubscription(@Path("subscriptionId") String subscriptionId);
 
+  @GET("/api/v1/confirmations/{txnId}")
+  Call<ConfirmationResponse> getConfirmation(String txnId);
 }

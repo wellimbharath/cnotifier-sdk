@@ -3,6 +3,7 @@ package net.cryptonotifier.notifier.api.client;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import java.util.List;
 import net.cryptonotifier.notifier.api.client.domain.BasicResponse;
+import net.cryptonotifier.notifier.api.client.domain.ConfirmationResponse;
 import net.cryptonotifier.notifier.api.client.domain.NewSubscription;
 import net.cryptonotifier.notifier.api.client.domain.SubscriptionResponse;
 
@@ -41,5 +42,9 @@ public interface CryptoNotifierRestApiClient {
    */
 
   BasicResponse deleteSubscription(String subscriptionId);
+
+
+  ConfirmationResponse getConfirmations(String txnId);
+
 
 }
